@@ -1,0 +1,30 @@
+
+Requirements
+------------
+
+Gunther requires PHP 4.3 and is not usually compatible with PHP safe-mode.
+
+Installation
+------------
+
+Please check for the very latest installation instructions at http://gunther.sourceforge.net
+
+1. Download the latest Gunther distribution from http://gunther.sourceforge.net
+
+2. Upload Gunther to your web-space. It is recommended that you decompress the Gunther distribution archive 'in-situ' as this will preserve the necessary directory permissions and ensure that your Gunther installation contains certain 'invisible' files (.htaccess files) which improve security. If you can't do this, don't worry - upload all the files contained within the Gunther archive then ensure that these directories are readable and writable by everyone (chmod 777):
+
+  gunther/data
+  gunther/private
+  gunther/uploads
+
+The directory 'gunther' will be the root of your Gunther website. You can move the entire contents of this directory anywhere you like as long as it is all accessible via the web. You might want to move everything out of the 'gunther' directory and run Gunther at the top level of your site.
+   
+4. Now we want to initialise and log-in to the new Gunther installation so we can start building a site. You should then open your browser and point it at your Gunther installation. The main index.php file should load and you should be forwarded to a log-in page. On a new installation the log-in page will ask you to provide an administrator user name and password. The user name can be anything you like. When you have entered the user name and password and logged in you will be presented with the 'Manage Website' screen. You will see an empty list of pages.
+
+5. Create your first page! You should create a page called 'index'. This will be the front page and the page that the index.php script forwards to for normal visitors.
+
+6. Once logged in you will stay logged in until you close your browser. To log in as the administrator later on, you must browser to the address of your Gunther website and add '/admin/' to the end of the URL. e.g.: http://www.mysite.com/gunther/admin or http://www.mysite.com/admin
+
+
+
+
