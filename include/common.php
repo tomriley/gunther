@@ -35,30 +35,33 @@
 	}
 	
 	// Explode $PATH_INFO
-	
+
+  $PATH_INFO = getenv('PATH_INFO');
+
 	if (!isset($PATH_INFO))
 	{
 		$PATH_INFO = substr($HTTP_SERVER_VARS['REQUEST_URI'], strlen($HTTP_SERVER_VARS['SCRIPT_NAME']));
 		if ($PATH_INFO{0} != '/')
 			unset($PATH_INFO);
 	}
-	
+
 	if (isset($PATH_INFO) && !empty($PATH_INFO))
 	{
 		$vardata = explode('/', $PATH_INFO);
 		$num_params = count($vardata);
-		
+
 		if ($num_params % 2 == 0)
 		{
 			$vardata[] = '';
 			$num_params++;
 		}
-		
+
 		for ($i=1 ; $i < $num_params ; $i+=2)
 		{
 			$_GET[$vardata[$i]] = $vardata[$i+1];
 		}
 	}
+
 	
 	//
 	// Given entire RCS checkout, return body
